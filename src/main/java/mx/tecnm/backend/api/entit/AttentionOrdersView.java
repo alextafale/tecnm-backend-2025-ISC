@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 import java.util.Date;
 
 @Entity
-@Table(name = "vista_pedidos_atencion")
+@Table(name = "vista_pedidos_atencion", schema = "ecommerce")
 public class AttentionOrdersView{
 
     @Id
@@ -20,7 +20,7 @@ public class AttentionOrdersView{
     private String numero;
 
     @Column(name  = "usuarios_id")
-    private int usuarios_id;
+    private Integer usuarios_id;
 
     @Column(name  = "importe_productos")
     private Double importe_productos;
@@ -31,7 +31,9 @@ public class AttentionOrdersView{
     @Column(name = "fecha")
     private Date fecha;
 
+public AttentionOrdersView() {
 
+}
     public AttentionOrdersView(Long id, String numero, Integer usuarios_id, Double importe_productos,
             Double importe_envio, Date fecha) {
         this.id = id;

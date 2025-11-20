@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "vista_productos_premium")
+@Table(name = "vista_productos_premium", schema = "ecommerce")
 public class vista_productos_premium{
     
 

@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 import java.util.Date;
 
 @Entity
-@Table(name = "vista_resumen_pedidos")
+@Table(name = "vista_resumen_pedidos", schema = "ecommerce")
 public class Resume_Orders_View{
 
     @Id

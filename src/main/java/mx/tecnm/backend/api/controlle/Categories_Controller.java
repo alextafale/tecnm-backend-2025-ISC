@@ -23,7 +23,7 @@ public class Categories_Controller {
     }
 
 
-    @GetMapping("/all")
+    @GetMapping()
     public List<Categorias> getAllCategories() {
         return categoryRepository.findAll();
     }

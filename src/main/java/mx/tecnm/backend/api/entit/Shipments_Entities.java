@@ -9,7 +9,7 @@ import jakarta.persistence.Table;
 import java.util.Date;
 
 @Entity
-@Table(name = "envios")
+@Table(name = "envios", schema = "ecommerce")
 public class Shipments_Entities {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

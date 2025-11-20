@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "metodos_pago")
+@Table(name = "metodos_pago", schema = "ecommerce")
 public class Payments_Methods_Entities {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

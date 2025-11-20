@@ -1,19 +1,15 @@
 package mx.tecnm.backend.api.entit;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "domicilios")
+@Table(name = "domicilios" , schema = "ecommerce")
 public class Addresses_Entities {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
+
     @Column(name = "calle")
     private String calle;
 
@@ -32,12 +28,14 @@ public class Addresses_Entities {
     @Column(name = "estado")
     private String estado;
 
-    @Column(name = "usuarios_id")
-    private Long usuarios_id;
+    @ManyToOne
+    @JoinColumn(name = "usuarios_id", nullable = false)
+    private Users usuario;
 
     public Addresses_Entities() {}
 
-    public Addresses_Entities(Long id, String calle, int numero, String colonia, int cp, String ciudad, String estado, Long usuarios_id) {
+    public Addresses_Entities(Long id, String calle, int numero, String colonia, int cp,
+                              String ciudad, String estado, Users usuario) {
         this.id = id;
         this.calle = calle;
         this.numero = numero;
@@ -45,7 +43,7 @@ public class Addresses_Entities {
         this.cp = cp;
         this.ciudad = ciudad;
         this.estado = estado;
-        this.usuarios_id = usuarios_id;
+        this.usuario = usuario;
     }
 
     public Long getId() {
@@ -104,11 +102,11 @@ public class Addresses_Entities {
         this.estado = estado;
     }
 
-    public Long getUsuarios_id() {
-        return usuarios_id;
+    public Users getUsuario() {
+        return usuario;
     }
 
-    public void setUsuarios_id(Long usuarios_id) {
-        this.usuarios_id = usuarios_id;
+    public void setUsuario(Users usuario) {
+        this.usuario = usuario;
     }
 }

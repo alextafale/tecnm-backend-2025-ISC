@@ -13,7 +13,7 @@ import lombok.Data;
 @Data //Genera los getters y setters automaticamente
 @AllArgsConstructor //Genera el constructor con todos los argumentos
 @Entity
-@Table(name = "detalles_carrito")
+@Table(name = "detalles_carrito", schema = "ecommerce")
 public class Cart_Details_Entities {
     
     @Id
@@ -31,4 +31,9 @@ public class Cart_Details_Entities {
 
     @Column(name = "usuarios_id")
     private Long usuarios_id;
+
+    public Cart_Details_Entities() {
+    }
 }
+
+

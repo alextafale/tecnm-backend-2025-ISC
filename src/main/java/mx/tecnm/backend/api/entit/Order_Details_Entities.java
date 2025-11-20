@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "detalles_pedido")
+@Table(name = "detalles_pedido", schema = "ecommerce")
 public class Order_Details_Entities {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,6 +25,9 @@ public class Order_Details_Entities {
 
     @Column(name = "pedidos_id")
     private Long pedidos_id;
+
+    public Order_Details_Entities() {
+    }
 
     public Order_Details_Entities(Long id, int cantidad, double precio, Long productos_id, Long pedidos_id) {
         this.id = id;

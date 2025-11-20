@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "vista_inventario_optimizado")
+@Table(name = "vista_inventario_optimizado", schema = "ecommerce")
 public class Optimized_Inventary_View{
 
     @Id

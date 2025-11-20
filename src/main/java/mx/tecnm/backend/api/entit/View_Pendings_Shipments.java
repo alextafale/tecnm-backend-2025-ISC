@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "vista_envios_pendientes")
+@Table(name = "vista_envios_pendientes", schema = "ecommerce")
 public class View_Pendings_Shipments{
 
     @Id

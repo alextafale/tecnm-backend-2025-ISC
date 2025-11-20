@@ -1,11 +1,8 @@
 package mx.tecnm.backend.api.controlle;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,7 +11,7 @@ import mx.tecnm.backend.api.entit.AttentionOrdersView;
 
 @RestController
 @RequestMapping("/api/ordenes_atencion")
-public class Attention_Orders_View {
+public class AttentionOrdersViewController {
 
     @Autowired
     private AttentionOrdersViewRepository attentionOrdersViewRepository;

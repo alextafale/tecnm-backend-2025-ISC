@@ -13,7 +13,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 @Entity
-@Table(name = "vista_productos_premium")
+@Table(name = "vista_productos_premium", schema = "ecommerce")
 public class ProductsPremiumView {
 
     @Id
@@ -31,5 +31,8 @@ public class ProductsPremiumView {
 
     @Column(name = "marca")
     private String marca;
+
+    public ProductsPremiumView() {
+    }
 
 }
